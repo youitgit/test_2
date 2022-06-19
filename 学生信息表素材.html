@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 600px;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        tr {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        table .tr {
+            background-color: #ddd;
+        }
+
+        tbody tr:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>学生信息</h2>
+    <p>将数据渲染到页面中...</p>
+
+    <table>
+        <caption>学生列表</caption>
+        <tr class="tr">
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>家乡</th>
+        </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        date = [
+            {
+                id: '1',
+                uname: '张三',
+                age: 20,
+                sex: '男',
+                home: '外星村'
+            },
+            {
+                id: '1',
+                uname: '李四',
+                age: 20,
+                sex: '男',
+                home: '外星村'
+            },
+            {
+                id: '1',
+                uname: '张六',
+                age: 20,
+                sex: '男',
+                home: '外星村'
+            },
+            {
+                id: '1',
+                uname: '张四',
+                age: 20,
+                sex: '男',
+                home: '外星村'
+            },
+            {
+                id: '1',
+                uname: '李思思',
+                age: 20,
+                sex: '男',
+                home: '外星村'
+            }
+        ]
+        let tbody = document.querySelector('tbody')
+        date.forEach(function (value) {
+            // console.log(value)
+            let tr = document.createElement('tr')
+            tr.innerHTML = '<td>' + value.id + '</td><td>' + value.uname + '</td><td>' + value.age + '</td><td>' + value.sex + '</td><td>' + value.home + '</td>'
+            tbody.appendChild(tr)
+        });
+
+    </script>
+
+</body>
+
+</html>
